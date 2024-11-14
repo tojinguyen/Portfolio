@@ -14,22 +14,22 @@ const Education = () => {
             duration: "Tháng 1, 2015 - Tháng 6, 2016",
             description: "Đào tạo về thiết kế game, lập trình game và sử dụng công cụ Unity."
         },
-        // Thêm các thông tin giáo dục khác ở đây
     ];
 
     return (
         <section
             id="education"
-            className="w-full px-4 py-8 bg-gradient-to-r from-yellow-400 to-red-500 text-white"
+            className="w-full px-4 py-8"
+            style={{ backgroundColor: '#1C1C1C' }}
         >
             <div className="max-w-screen-xl mx-auto">
-                <h2 className="text-3xl font-bold mb-4">My Education</h2>
+                <h2 className="text-5xl font-bold mb-6 text-white text-center">My Education</h2>
                 <div className="space-y-4">
                     {educationList.map((edu, index) => (
                         <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-lg">
                             <h3 className="text-xl font-semibold">{edu.degree}</h3>
-                            <p className="text-sm italic">{edu.institution} | {edu.duration}</p>
-                            <p>{edu.description}</p>
+                            <p className="text-sm italic text-gray-400">{edu.institution} | {edu.duration}</p>
+                            <p className="text-white">{edu.description}</p>
                         </div>
                     ))}
                 </div>
